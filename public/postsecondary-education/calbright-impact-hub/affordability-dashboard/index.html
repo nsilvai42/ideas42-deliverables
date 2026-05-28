@@ -129,7 +129,7 @@ header.brand .container { padding-top:0; padding-bottom:0; display:flex; align-i
 .fee-v2 { --v2-line: rgba(0,67,87,0.12); --v2-soft: rgba(217,225,226,0.24); }
 .fee-v2 * { min-width:0; }
 .fee-v2 .tab-intro { border-left-color: var(--deep-sea); margin-bottom:24px; }
-.fee-v2-read-row { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
+.fee-v2-read-row { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; padding-left:12px; }
 .fee-v2-chip { display:inline-flex; align-items:center; gap:7px; padding:8px 11px; border-radius:999px; background:rgba(8,112,132,0.08); border:1px solid rgba(8,112,132,0.16); color:var(--indigo); font-size:12px; font-weight:900; letter-spacing:0.2px; }
 .fee-v2-chip i { color:var(--deep-sea); font-size:15px; }
 .fee-v2-section { margin:0 0 34px; padding:28px 30px; background:#fff; border:1px solid var(--v2-line); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); }
@@ -137,7 +137,7 @@ header.brand .container { padding-top:0; padding-bottom:0; display:flex; align-i
 .fee-v2-kicker { color:var(--deep-sea); font-size:11px; font-weight:900; letter-spacing:1.4px; text-transform:uppercase; margin-bottom:8px; }
 .fee-v2-section h2 { font-size:28px; letter-spacing:-0.45px; margin-bottom:9px; }
 .fee-v2-lede { color:var(--indigo); font-size:15.5px; line-height:1.68; max-width:1060px; margin-bottom:20px; }
-.fee-v2-mini-note { display:flex; gap:12px; align-items:flex-start; padding:14px 16px; border-radius:var(--radius-sm); background:rgba(0,67,87,0.05); border-left:4px solid var(--green-apple); color:var(--indigo); font-size:14px; line-height:1.55; font-weight:600; }
+.fee-v2-mini-note { display:flex; gap:12px; align-items:flex-start; margin-top:22px; padding:14px 16px; border-radius:var(--radius-sm); background:rgba(0,67,87,0.05); border-left:4px solid var(--green-apple); color:var(--indigo); font-size:14px; line-height:1.55; font-weight:600; }
 .fee-v2-mini-note i { color:var(--green-apple); font-size:18px; margin-top:1px; }
 .fee-v2-formulas { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:12px; margin-top:16px; }
 .fee-v2-formula { padding:14px 15px; border-radius:var(--radius-sm); background:#fff; border:1px solid var(--v2-line); border-top:4px solid var(--spruce); }
@@ -947,9 +947,9 @@ footer { padding:40px 0 24px; color:var(--deep-sea); font-size:14px; text-align:
 .promising-insight ul { list-style:none; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; }
 .promising-insight li { background:#fff; border:1px solid rgba(0,67,87,0.10); border-radius:var(--radius-sm); padding:11px 12px 11px 34px; color:var(--indigo); font-size:13.2px; line-height:1.35; font-weight:700; position:relative; }
 .promising-insight li::before { content:'\ea5e'; font-family:'tabler-icons' !important; position:absolute; left:11px; top:11px; color:var(--spruce); font-size:16px; }
-.layer-note { margin-top:16px; padding:14px 16px; border-radius:var(--radius-sm); background:rgba(239,106,0,0.08); border-left:4px solid var(--cayenne); color:var(--indigo); font-size:13.5px; line-height:1.5; font-weight:600; }
-.testing-audience-list { list-style:none; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:10px; margin-top:16px; }
-.testing-audience-list li { padding:12px 13px; border-radius:var(--radius-sm); background:rgba(8,112,132,0.07); border:1px solid rgba(8,112,132,0.12); color:var(--indigo); font-size:13px; line-height:1.38; font-weight:600; }
+.layer-note { margin-top:22px; padding:16px 18px; border-radius:var(--radius-sm); background:rgba(239,106,0,0.08); border-left:4px solid var(--cayenne); color:var(--indigo); font-size:13.5px; line-height:1.55; font-weight:600; }
+.testing-audience-list { list-style:none; display:grid; grid-template-columns:1fr; gap:10px; margin-top:18px; }
+.testing-audience-list li { padding:14px 18px; border-radius:var(--radius-sm); background:rgba(8,112,132,0.07); border:1px solid rgba(8,112,132,0.12); color:var(--indigo); font-size:14px; line-height:1.5; font-weight:600; }
 .mkt-final-note { display:flex; align-items:flex-start; gap:12px; background:rgba(0,67,87,0.05); border-left:4px solid var(--green-apple); border-radius:var(--radius-sm); padding:15px 18px; color:var(--indigo); font-size:14px; line-height:1.55; font-weight:600; margin-bottom:8px; }
 .mkt-final-note i { color:var(--green-apple); font-size:18px; margin-top:1px; flex:0 0 auto; }
 #panel-recommendations .rec.warn h4 { margin-bottom:12px; }
@@ -2056,9 +2056,9 @@ footer {
 <div class="kpis">
 <div class="kpi deepsea"><div class="kpi-accent"></div><div class="kpi-icon"><i class="ti ti-school"></i></div><div class="label" data-copy-key="methods_kpi_label_education">Education</div><div class="value">54<span class="qs-unit">%</span></div><div class="sub" data-copy-key="methods_kpi_subtitle_education">High school or less</div></div>
 <div class="kpi indigo"><div class="kpi-accent"></div><div class="kpi-icon"><i class="ti ti-heart-handshake"></i></div><div class="label" data-copy-key="methods_kpi_label_caregiver">Caregiver</div><div class="value">45<span class="qs-unit">%</span></div><div class="sub" data-copy-key="methods_kpi_subtitle_caregiver">Any caregiving responsibility</div></div>
-<div class="kpi spruce"><div class="kpi-accent"></div><div class="kpi-icon"><i class="ti ti-users"></i></div><div class="label">Respondents</div><div class="value">314</div><div class="sub" data-copy-key="methods_kpi_subtitle_methods_sample">Prolific, Apr 30 – May 8, 2026</div></div>
+<div class="kpi spruce"><div class="kpi-accent"></div><div class="kpi-icon"><i class="ti ti-cash"></i></div><div class="label">Income under $50K</div><div class="value">64<span class="qs-unit">%</span></div><div class="sub" data-copy-key="methods_kpi_subtitle_methods_sample">Household income — our sample</div></div>
 <div class="kpi green"><div class="kpi-accent"></div><div class="kpi-icon"><i class="ti ti-briefcase"></i></div><div class="label">Career-Driven</div><div class="value">43<span class="qs-unit">%</span></div><div class="sub" data-copy-key="methods_kpi_subtitle_methods_sample_3">Calbright's primary motivation segment</div></div>
-<div class="kpi cayenne"><div class="kpi-accent"></div><div class="kpi-icon"><i class="ti ti-map-pin"></i></div><div class="label">California</div><div class="value">54</div><div class="sub" data-copy-key="methods_kpi_subtitle_methods_sample_2">17% · intentional oversample</div></div>
+<div class="kpi cayenne"><div class="kpi-accent"></div><div class="kpi-icon"><i class="ti ti-user"></i></div><div class="label">White</div><div class="value">72<span class="qs-unit">%</span></div><div class="sub" data-copy-key="methods_kpi_subtitle_methods_sample_2">Race/ethnicity — our sample</div></div>
 </div>
 <h2 class="section-h"><i class="ti ti-map-pin"></i><span>California's share of the sample</span></h2>
 <div class="row two equal-cards">
@@ -2071,11 +2071,8 @@ footer {
 <div class="takeaway ca-take"><div class="ic"><i class="ti ti-map-pin"></i></div><div class="content"><div class="label">CA = better proxy</div><p data-copy-key="methods_chart_takeaway_how_our_sample_compares_to">On race (57% vs Calbright's 38%) and income (70% under $50K vs Calbright's 67%), the CA subsample lands closer to Calbright's actual applicant base than the overall sample does.</p></div></div>
 </div>
 </div>
-<h2 class="section-h"><i class="ti ti-chart-pie"></i>Key sample composition</h2>
-<div class="row two">
-<div class="card" data-chart-id="income"><div class="card-head"><div class="ic spruce"><i class="ti ti-cash"></i></div><div><h3>Household Income</h3></div></div><div class="chart-wrap medium"><canvas id="canvas-income"></canvas></div></div>
-<div class="card" data-chart-id="caregiving_grouped"><div class="card-head"><div class="ic green"><i class="ti ti-heart-handshake"></i></div><div><h3>Caregiving Status</h3></div></div><div class="chart-wrap medium"><canvas id="canvas-caregiving_grouped"></canvas></div></div>
-</div>
+<h2 class="section-h"><i class="ti ti-chart-pie"></i>Caregiving status</h2>
+<div class="card" data-chart-id="caregiving_grouped"><div class="chart-wrap medium"><canvas id="canvas-caregiving_grouped"></canvas></div></div>
 </div>
 <!-- ============================================================
      PANEL: FEE-FINDINGS
@@ -2513,13 +2510,6 @@ footer {
 </ul>
 </section>
 
-<section class="fee-v2-section" aria-labelledby="fee-v2-variant-title">
-<div class="fee-v2-kicker">Counterfactual variants</div>
-<h2 id="fee-v2-variant-title">Counterfactual variant prompts</h2>
-<p class="fee-v2-lede">We tested three model variants. Only one tested net-positive.</p>
-<div data-chart-id="variant_prompts"><div class="chart-wrap compact" style="margin-top:8px;"><canvas id="canvas-variant_prompts"></canvas></div></div>
-<div class="fee-v2-mini-note"><i class="ti ti-bulb"></i><span><strong>Free-start PAYG +11pp net.</strong> Escalating Subscription −12pp; Effort-based Refund −8pp. Two clear "do-not-pilot" signals and one "this is worth folding into the primary pilot" — and we did.</span></div>
-</section>
 </div>
 <!-- ============================================================
      PANEL: ADDITIONAL-FINDINGS
@@ -2547,10 +2537,7 @@ footer {
 <div class="sub-sub" data-copy-key="price_section_summary_calbright_reads_as_an_online">Only <strong>5%</strong> spontaneously associate the program with a community college. Online university (32%) and MOOC (18%) dominate. <strong>Calbright cannot assume prospects bring the right category frame.</strong></div>
 </div>
 </div>
-<div class="row two equal-cards">
 <div class="card" data-chart-id="mental_model_picks"><div class="card-head"><div class="ic cayenne"><i class="ti ti-bulb"></i></div><div><h3 data-copy-key="price_card_title_calbright_reads_as_an_online">What does this remind you of?</h3><div class="card-sub" data-copy-key="price_chart_subtitle_what_does_this_remind_you">Multi-select; respondents can pick multiple frames</div></div></div><div class="chart-wrap medium"><canvas id="canvas-mental_model_picks"></canvas></div><div class="takeaway"><div class="ic"><i class="ti ti-bulb"></i></div><div class="content"><div class="label">Communications implication</div><p data-copy-key="price_chart_takeaway_what_does_this_remind_you">Calbright cannot assume prospects bring the right category frame: <strong>"community college" is nearly invisible at 5%</strong>.</p></div></div></div>
-<div class="card" data-chart-id="similarity"><div class="card-head"><div class="ic spruce"><i class="ti ti-scale"></i></div><div><h3 data-copy-key="price_card_title_what_does_this_remind_you">Similarity to each program type (1–7)</h3><div class="card-sub" data-copy-key="price_chart_subtitle_similarity_to_each_program_type">Mean similarity score on a 1–7 Likert scale</div></div></div><div class="chart-wrap medium"><canvas id="canvas-similarity"></canvas></div></div>
-</div>
 <div class="price-callout"><i class="ti ti-speakerphone"></i><span data-copy-key="price_category_implication_callout">Implication: “California community college” should appear early in marketing copy, before or alongside price. It explains both legitimacy and affordability.</span></div>
 <!-- ============= Sub-section 2: $460 too cheap ============= -->
 <div class="sub-h">
@@ -2565,11 +2552,11 @@ footer {
 <div class="price-stat-card secondary"><strong data-copy-key="price_median_guess_stat_value">$1,500</strong><span data-copy-key="price_median_guess_stat_label">median unanchored cost guess before respondents saw a price.</span></div>
 <div class="price-stat-card support"><strong data-copy-key="price_acceptable_range_stat_value">$516–$1,025</strong><span data-copy-key="price_acceptable_range_stat_label">Van Westendorp acceptable range.</span></div>
 </div>
-<div class="row two">
+<div class="row two equal-cards">
 <div class="card" data-chart-id="cost_histogram"><div class="card-head"><div class="ic deepsea"><i class="ti ti-chart-histogram"></i></div><div><h3>Un-anchored cost guesses</h3><div class="card-sub" data-copy-key="price_chart_subtitle_un_anchored_cost_guesses">What respondents thought a program like Calbright's would cost, before being shown any price</div></div></div><div class="chart-wrap medium"><canvas id="canvas-cost_histogram"></canvas></div></div>
-<div class="card" data-chart-id="van_westendorp"><div class="card-head"><div class="ic indigo"><i class="ti ti-chart-line"></i></div><div><h3 data-copy-key="price_card_title_un_anchored_cost_guesses">Van Westendorp price-sensitivity</h3><div class="card-sub" data-copy-key="price_chart_subtitle_van_westendorp_price_sensitivity">Where the four curves cross defines the acceptable range. $460 marked for reference.</div></div></div><div class="chart-wrap medium"><canvas id="canvas-van_westendorp"></canvas></div></div>
-</div>
 <div class="card" data-chart-id="cost_by_mental_model"><div class="card-head"><div class="ic green"><i class="ti ti-arrows-split-2"></i></div><div><h3 data-copy-key="price_card_title_van_westendorp_price_sensitivity">Mental model explains the “too cheap” signal</h3><div class="card-sub" data-copy-key="price_chart_subtitle_cost_guess_median_by_mental">MOOC-framers expect lower prices; online-university and professional-certification framers expect higher ones.</div></div></div><div class="chart-wrap medium"><canvas id="canvas-cost_by_mental_model"></canvas></div></div>
+</div>
+<div class="card" data-chart-id="van_westendorp"><div class="card-head"><div class="ic indigo"><i class="ti ti-chart-line"></i></div><div><h3 data-copy-key="price_card_title_un_anchored_cost_guesses">Van Westendorp price-sensitivity</h3><div class="card-sub" data-copy-key="price_chart_subtitle_van_westendorp_price_sensitivity">Where the four curves cross defines the acceptable range. $460 marked for reference.</div></div></div><div class="chart-wrap medium"><canvas id="canvas-van_westendorp"></canvas></div></div>
 <div class="price-callout"><i class="ti ti-certificate"></i><span data-copy-key="price_too_cheap_synthesis">Do not lead with price alone. Explain why a legitimate accredited program can cost this little.</span></div>
 <!-- ============= Sub-section 3: Cost dominates + trust signals ============= -->
 <div class="sub-h">
@@ -2731,7 +2718,11 @@ footer {
 <div class="card" data-chart-id="gender"><div class="card-head"><div class="ic spruce"><i class="ti ti-user"></i></div><div><h3>Gender</h3></div></div><div class="chart-wrap medium"><canvas id="canvas-gender"></canvas></div></div>
 <div class="card" data-chart-id="goals_grouped"><div class="card-head"><div class="ic green"><i class="ti ti-target"></i></div><div><h3>Educational Goals</h3></div></div><div class="chart-wrap medium"><canvas id="canvas-goals_grouped"></canvas></div></div>
 </div>
+<div class="row two">
+<div class="card" data-chart-id="income"><div class="card-head"><div class="ic spruce"><i class="ti ti-cash"></i></div><div><h3>Household Income</h3></div></div><div class="chart-wrap medium"><canvas id="canvas-income"></canvas></div></div>
 <div class="card" data-chart-id="prior_online"><div class="card-head"><div class="ic deepsea"><i class="ti ti-device-laptop"></i></div><div><h3 data-copy-key="appendix_card_title_educational_goals">Prior Online-Learning Experience</h3></div></div><div class="chart-wrap medium"><canvas id="canvas-prior_online"></canvas></div></div>
+</div>
+<div class="card" data-chart-id="similarity"><div class="card-head"><div class="ic spruce"><i class="ti ti-scale"></i></div><div><h3>Similarity to each program type (1–7)</h3><div class="card-sub">Mean similarity score on a 1–7 Likert scale</div></div></div><div class="chart-wrap medium"><canvas id="canvas-similarity"></canvas></div></div>
 </div>
 <div class="av-section">
 <div class="av-section-label">2 · Full distribution detail on fee-model Likert questions</div>
@@ -10272,7 +10263,8 @@ function makeCAvsRest(canvasId, data, opts={}) {
 function makeCareerByPicker(canvasId, data, opts={}) {
   const items = data.items || [];
   const colorByLabel = { 'PAYG-pickers': COLORS.PAYG, 'Monthly-pickers': COLORS.Monthly, 'Refund-pickers': COLORS.Refund, 'Full sample': COLORS.rain };
-  makeBar(canvasId, items.map(i => `${i.label}\n(n=${i.n})`), items.map(i => i.value), { colors: items.map(i => colorByLabel[i.label] || COLORS.spruce), fmt: v => v + '% career-driven', yMax: 80, ...opts });
+  const stripPickers = (label) => label.replace(/-pickers$/, '');
+  makeBar(canvasId, items.map(i => `${stripPickers(i.label)}\n(n=${i.n})`), items.map(i => i.value), { colors: items.map(i => colorByLabel[i.label] || COLORS.spruce), fmt: v => v + '% career-driven', yMax: 80, ...opts });
 }
 
 function makeIncomeXRefund(canvasId, data, opts={}) {
@@ -10307,7 +10299,7 @@ const PRESERVE_BAR_ORDER = new Set([
 function orderedBarData(chartId, labels, values) {
   const items = labels.map((label, index) => ({ label, value: values[index], residual: RESIDUAL_LABEL_RE.test(label) }));
   if (PRESERVE_BAR_ORDER.has(chartId)) return items;
-  const direction = chartId === 'factor_meanrank' ? 1 : -1;
+  const direction = (chartId === 'factor_meanrank' || chartId === 'funding_sources') ? 1 : -1;
   return items.sort((a, b) => {
     if (a.residual !== b.residual) return a.residual ? 1 : -1;
     return direction * (Number(a.value) - Number(b.value));
