@@ -602,7 +602,9 @@ header.brand .container { padding-top:0; padding-bottom:0; display:flex; align-i
 .card h3 { font-size:20px; font-weight:900; color:var(--indigo); line-height:1.3; margin-bottom:4px; letter-spacing:-0.3px; }
 .card .card-sub { font-size:13px; color:var(--deep-sea); font-weight:300; line-height:1.5; }
 #panel-recommendations > .card .card-head h3 { font-size:26px; letter-spacing:-0.4px; line-height:1.25; }
-#panel-recommendations > .card .card-head .ic { width:48px; height:48px; font-size:24px; border-radius:14px; }
+#panel-recommendations > .card .card-head .ic { width:48px; height:48px; flex:0 0 48px; font-size:24px; border-radius:14px; }
+#panel-recommendations > .card .card-head { align-items:center; margin-bottom:18px; }
+#panel-recommendations > .card { padding:28px 32px 26px; }
 .card .chart-wrap { position:relative; margin-top:6px; flex:0 0 auto; min-height:0; width:100%; max-width:100%; overflow:hidden; }
 .card .chart-wrap.compact { height:240px; }
 .card .chart-wrap.medium { height:300px; }
@@ -907,7 +909,7 @@ footer { padding:40px 0 24px; color:var(--deep-sea); font-size:14px; text-align:
 .pilot-callout { background:var(--bg-card); border-radius:var(--radius-md); padding:0; margin-bottom:24px; box-shadow:var(--shadow-md); overflow:hidden; }
 .pilot-callout .pc-header { background: linear-gradient(135deg, var(--spruce) 0%, var(--green-apple) 100%); color:#fff; padding:22px 28px; }
 .pilot-callout .pc-tag { font-size:11px; font-weight:900; letter-spacing:1.5px; text-transform:uppercase; opacity:0.92; margin-bottom:6px; }
-.pilot-callout .pc-title { font-size:22px; font-weight:900; letter-spacing:-0.3px; line-height:1.25; }
+.pilot-callout .pc-title { font-size:24px; font-weight:900; letter-spacing:-0.35px; line-height:1.25; }
 .pilot-callout .pc-body { padding:24px 28px 22px; }
 .pilot-callout .pc-body p { font-size:14.5px; line-height:1.65; color:var(--indigo); font-weight:300; margin-bottom:14px; }
 .pilot-callout .pc-body strong { font-weight:700; }
@@ -929,7 +931,7 @@ footer { padding:40px 0 24px; color:var(--deep-sea); font-size:14px; text-align:
 .next-step-callout { display:flex; align-items:center; gap:18px; background:linear-gradient(135deg, rgba(8,112,132,0.08) 0%, rgba(8,112,132,0.04) 100%); border:1px solid rgba(8,112,132,0.18); border-left:5px solid var(--deep-sea); border-radius:var(--radius-md); padding:22px 28px; margin:8px 0 28px; }
 .next-step-callout i { width:40px; height:40px; border-radius:12px; background:var(--deep-sea); color:#fff; display:flex; align-items:center; justify-content:center; flex:0 0 40px; font-size:22px; }
 .next-step-callout p { font-size:16px; color:var(--indigo); line-height:1.55; font-weight:600; margin:0; }
-.next-step-callout p strong, .next-step-callout p::first-line { color:var(--deep-sea); }
+.next-step-callout p strong { color:var(--deep-sea); }
 /* Marketing implication mini-cards (Recommendations tab) */
 .mkt-grid { display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin-bottom:24px; }
 @media (max-width:980px) { .mkt-grid { grid-template-columns: 1fr; } }
@@ -2515,7 +2517,8 @@ footer {
 <div class="fee-v2-kicker">Counterfactual variants</div>
 <h2 id="fee-v2-variant-title">Counterfactual variant prompts</h2>
 <p class="fee-v2-lede">We tested three model variants. Only one tested net-positive.</p>
-<div class="card" data-chart-id="variant_prompts" style="margin-top:6px;"><div class="chart-wrap compact"><canvas id="canvas-variant_prompts"></canvas></div><div class="takeaway"><div class="ic"><i class="ti ti-bulb"></i></div><div class="content"><div class="label">Key takeaway</div><p data-copy-key="recommendations_chart_takeaway_counterfactual_variant_prompts"><strong>Free-start PAYG +11pp net.</strong> Escalating Subscription −12pp; Effort-based Refund −8pp. Two clear "do-not-pilot" signals and one "this is worth folding into the primary pilot" — and we did.</p></div></div></div>
+<div data-chart-id="variant_prompts"><div class="chart-wrap compact" style="margin-top:8px;"><canvas id="canvas-variant_prompts"></canvas></div></div>
+<div class="fee-v2-mini-note"><i class="ti ti-bulb"></i><span><strong>Free-start PAYG +11pp net.</strong> Escalating Subscription −12pp; Effort-based Refund −8pp. Two clear "do-not-pilot" signals and one "this is worth folding into the primary pilot" — and we did.</span></div>
 </section>
 </div>
 <!-- ============================================================
@@ -2880,8 +2883,6 @@ const DEFAULT_COPY = {
   "exec_recommendation_avoid_punitive": "Punitive framing",
   "methods_tab_guiding_question_methods_sample": "Who we studied, how we structured the three fee models, and what to keep in mind when reading the findings.",
   "methods_tab_summary_methods_sample_v2": "N = 314 prospective adult learners on Prolific, with <strong>intentional California oversampling (n=54)</strong>. Three fee models, all calibrated to the same <strong>$460 total</strong> at typical pace (the per-unit CCC rate under California Education Code §75010 × 10 modules).",
-  "methods_ca_callout_title_methods_sample_v2": "Why CA gets its own comparisons throughout the dashboard",
-  "methods_ca_callout_body_methods_sample_v2": "CA is Calbright's actual operating geography. We boosted CA recruitment so the CA subsample (n=54) is large enough to read on its own. The <span class=\"ca-flag\"><i class=\"ti ti-map-pin\"></i>CA Sample</span> tag marks findings where the CA cut diverges from the US sample — give those extra weight in pilot design.",
   "methods_kpi_subtitle_methods_sample": "Prolific, Apr 30 – May 8, 2026",
   "methods_kpi_subtitle_methods_sample_2": "17% · intentional oversample",
   "methods_kpi_subtitle_methods_sample_3": "Calbright's primary motivation segment",
@@ -3194,14 +3195,6 @@ const DEFAULT_COPY = {
   "fee_models_v2_subscription_driver_text": "Subscription’s mechanism is time-based urgency: each additional month enrolled creates another fee, so finishing faster saves money.",
   "fee_models_v2_subscription_audience_title": "Audience split",
   "fee_models_v2_subscription_audience_text": "It can work for learners who want structure or predictable billing, but rush-pressure concern is higher among non-pickers.",
-  "fee_models_v2_subscription_motivation_positive": "63%",
-  "fee_models_v2_subscription_motivation_positive_label": "endorsed a positive motivation effect",
-  "fee_models_v2_subscription_finish_fast": "44%",
-  "fee_models_v2_subscription_finish_fast_label": "said it would motivate students to finish faster to save money",
-  "fee_models_v2_subscription_structure": "19%",
-  "fee_models_v2_subscription_structure_label": "said it would add structure/accountability",
-  "fee_models_v2_subscription_rush": "14% vs 4.8%",
-  "fee_models_v2_subscription_rush_label": "rush-pressure concern among non-pickers vs Subscription-pickers",
   "fee_models_v2_subscription_design_note": "Subscription is not the model to lead with, but it identifies a useful ingredient: pace pressure. The problem is that pace pressure can quickly become punishment.",
   "fee_models_v2_refund_kicker": "Model deep dive",
   "fee_models_v2_refund_title": "Refund: strongest completion pull, biggest adoption risk.",
@@ -3350,8 +3343,6 @@ const DEFAULT_COPY = {
   "recommendations_pilot_callout_body_the_pilot_speed_discount_pay_2_v2": "<strong>Who to recruit:</strong> Prioritize current applicants and prospective Calbright learners for demand, framing, and enrollment reactions. Use current students as a secondary audience for usability, equity, operational, and support concerns.",
   "recommendations_pilot_callout_body_the_pilot_speed_discount_pay_3": "<strong>Primary success metrics:</strong> Enrollment rate + module-by-module completion times.",
   "recommendations_pilot_key_risk_v2": "<strong>Key risk to surface in convening:</strong> Time-based incentives can disadvantage learners whose pace is shaped by disability, caregiving, work, health, or other constraints. User testing should explore pause rules, hardship accommodations, and whether the incentive feels supportive or punitive.",
-  "recommendations_card_title_four_things_the_findings_argue": "Counterfactual variant prompts",
-  "recommendations_chart_subtitle_counterfactual_variant_prompts": "We tested three model variants. Only one tested net-positive.",
   "recommendations_chart_takeaway_counterfactual_variant_prompts": "<strong>Free-start PAYG +11pp net.</strong> Escalating Subscription −12pp; Effort-based Refund −8pp. Two clear \"do-not-pilot\" signals and one \"this is worth folding into the primary pilot\" — and we did.",
   "recommendations_marketing_section_title": "Marketing implications beyond the pilot",
   "recommendations_marketing_implication_title_anchor_price": "Anchor price in the trust trio — never show $460 alone",
